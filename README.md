@@ -31,6 +31,15 @@ $ cat /proc/cmdline
 [..] tftp_server=192.168.56.1
 ```
 
+The partitioner package can be downloaded and run from
+`preseed/early_command`, e.g.:
+
+```bash
+d-i preseed/early_command string \
+  tftp -g 192.168.56.1 -r remote-script-partitioner_0.0.1_all.udeb -l /tmp/partitioner.udeb \
+  && udpkg --unpack /tmp/partitioner.udeb
+```
+
 ### Example
 
 Below is an example script for GPT + dm-crypt + LVM.  This script
