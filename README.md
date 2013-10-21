@@ -31,6 +31,9 @@ $ cat /proc/cmdline
 [..] tftp_server=192.168.56.1
 ```
 
+Example from `debian-preseed`:
+<https://github.com/bfritz/debian-preseed/blob/scripted-partitioning/config/preseed.cfg.in#L4>
+
 The partitioner package can be downloaded and run from
 `preseed/early_command`, e.g.:
 
@@ -39,6 +42,10 @@ d-i preseed/early_command string \
   tftp -g 192.168.56.1 -r remote-script-partitioner_0.0.1_all.udeb -l /tmp/partitioner.udeb \
   && udpkg --unpack /tmp/partitioner.udeb
 ```
+
+Example from `debian-preseed`:
+<https://github.com/bfritz/debian-preseed/blob/scripted-partitioning/config/vbox.conf#L21>
+
 
 ### Example
 
