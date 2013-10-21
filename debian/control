@@ -1,0 +1,13 @@
+Package: remote-script-partitioner
+XC-Package-Type: udeb
+Version: 0.0.1
+License: BSD-2-clause
+Vendor: none
+Architecture: all
+Maintainer: <brad@fewerhassles.com>
+Standards-Version: 3.9.1
+Section: default
+Priority: extra
+Homepage: https://github.com/bfritz/remote-script-partitioner
+Installer-Menu-Item: 4100
+Description: Download script from remote TFTP server and execute it to partition disk(s).
