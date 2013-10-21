@@ -57,6 +57,9 @@ Below is an example script for GPT + dm-crypt + LVM.  This script:
 * adds the encrypted partition to a LVM volume group
 * creates 1G `/` and 2G `/home` volumes with ext4 partitions
 
+**CAUTION**: If you use this script as-is, change the encryption key
+afterward, e.g.  `cryptsetup luksChangeKey /dev/sda3 --verify-passphrase`!
+
 ```bash
 #!/bin/sh
 
