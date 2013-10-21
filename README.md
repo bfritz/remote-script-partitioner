@@ -25,13 +25,12 @@ The partitioner expects `tftp_server` to be set on the kernel
 command line.  It downloads and executes a script named
 `partitioner` from the root of the TFTP server.
 
-
 ```bash
 $ cat /proc/cmdline
 [..] tftp_server=192.168.56.1
 ```
 
-Example from `debian-preseed`:
+Example from `debian-preseed`:<br/>
 <https://github.com/bfritz/debian-preseed/blob/scripted-partitioning/config/preseed.cfg.in#L4>
 
 The partitioner package can be downloaded and run from
@@ -43,13 +42,13 @@ d-i preseed/early_command string \
   && udpkg --unpack /tmp/partitioner.udeb
 ```
 
-Example from `debian-preseed`:
+Example from `debian-preseed`:<br/>
 <https://github.com/bfritz/debian-preseed/blob/scripted-partitioning/config/vbox.conf#L21>
 
 
-### Example
+### Script Example
 
-Below is an example script for GPT + dm-crypt + LVM.  This script
+Below is an example script for GPT + dm-crypt + LVM.  This script:
 
 * partitions the first disk with a GUID Partition Table (GPT)
 * creates a small `biosboot` partition, 500MB `boot` partition
